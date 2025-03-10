@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeCrafts Share Market Institute | Professional Trading</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1f4d7a;
+            --secondary: #2a6494;
+            --accent: #c8a45c;
+        }
+        
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+
+        .skeumorphic-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 
+                5px 5px 10px rgba(0,0,0,0.2),
+                -5px -5px 10px rgba(255,255,255,0.5);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .skeumorphic-button {
+            background: linear-gradient(145deg, var(--primary), var(--secondary));
+            box-shadow: 
+                3px 3px 6px rgba(0,0,0,0.3),
+                -2px -2px 5px rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skeumorphic-button:active {
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+            transform: translateY(1px);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1642543492481-44e81e3914a6') center/cover;
+            position: relative;
+        }
+
+        .metal-texture {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            background-size: 200% 200%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <h1 class="text-2xl font-bold text-gray-800">TRADECRAFTS</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-gray-900">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900">About</a>
+                    <a href="#courses" class="nav-link text-gray-700 hover:text-gray-900">Courses</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                Master The Art of Trading
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">Professional Trading Education for Modern Investors</p>
+            <a href="#courses" class="skeumorphic-button text-white font-bold py-4 px-12 rounded-lg inline-block">
+                Start Your Journey
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Our Expertise</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="skeumorphic-card p-8 rounded-lg">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Welcome to TradeCrafts Share Market Institute, where we empower individuals to master the art of trading and investing. Our expert team blends technical expertise with practical experience, guiding you to achieve financial freedom through stock market education.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="skeumorphic-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vaibhav Rananavare</h3>
+                        <p class="text-gray-600">Stock Market Educator</p>
+                    </div>
+                    <div class="skeumorphic-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Rakesh Ghule</h3>
+                        <p class="text-gray-600">Analysis Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 metal-texture">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-white">Our Programs</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="skeumorphic-card p-8 rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Basic Course</h3>
+                    <p class="text-gray-600 mb-4">Market fundamentals and essential trading strategies</p>
+                    <p class="text-3xl font-bold mb-6 text-gray-800">₹12,000</p>
+                    <button onclick="handlePayment('basic')" class="skeumorphic-button w-full text-white font-bold py-3 px-8 rounded-lg">
+                        Enroll Now
+                    </button>
+                </div>
+                <div class="skeumorphic-card p-8 rounded-lg bg-white">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Advanced Course</h3>
+                    <p class="text-gray-600 mb-4">Professional trading techniques and advanced analysis</p>
+                    <p class="text-3xl font-bold mb-6 text-gray-800">₹19,999</p>
+                    <button onclick="handlePayment('advanced')" class="skeumorphic-button w-full text-white font-bold py-3 px-8 rounded-lg">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Get in Touch</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="skeumorphic-card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Contact Information</h3>
+                    <p class="mb-2 text-gray-600"><i class="bi bi-telephone-fill mr-2"></i> 995576020 / 9850690303</p>
+                    <p class="mb-2 text-gray-600"><i class="bi bi-envelope-fill mr-2"></i> Tradecraftsharemarketinstitute@gmail.com</p>
+                    <p class="mb-4 text-gray-600"><i class="bi bi-geo-alt-fill mr-2"></i> Crystal Fortune, Mundhwa, Pune 411036</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/tradecrafts_institute" target="_blank" class="text-2xl text-gray-700 hover:text-blue-600">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/KK2W5fALipG9fQOEwhU5ob" target="_blank" class="text-2xl text-gray-700 hover:text-green-600">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="skeumorphic-card p-8 rounded-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613267110847!2d73.91411231489322!3d18.54644398738454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sMundhwa%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1645548762374!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4 text-gray-400">Join our network for daily market insights</p>
+            <a href="https://chat.whatsapp.com/KK2W5fALipG9fQOEwhU5ob" target="_blank" class="skeumorphic-button bg-green-600 text-white font-bold py-2 px-6 rounded-lg inline-block">
+                Join WhatsApp Group
+            </a>
+            <p class="mt-8 text-gray-500">&copy; 2024 TradeCrafts Share Market Institute. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Payment handling
+        function handlePayment(course) {
+            const amounts = {
+                'basic': 12000,
+                'advanced': 19999
+            };
+            alert(`Processing payment for ${course} course. Amount: ₹${amounts[course]}`);
+            // Implement actual payment gateway integration here
+        }
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
